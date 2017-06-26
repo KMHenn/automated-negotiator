@@ -1,8 +1,8 @@
 /**
  * Model of the opponent created by the agent.
  * 
- * @author Kaitlyn Hennessy
- * version 6.23.2017
+ * @author Kaitlyn
+ * version 6.26.2017
  */
 public class OpponentModel{
 	
@@ -12,9 +12,16 @@ public class OpponentModel{
 	 * 
 	 * @return
 	 */
-	public int predictedOffer(){
+	public double predictedOffer(){
 		//TODO
 		return 0;
+	}
+	
+	/**
+	 * Update the model of the opponent.
+	 */
+	public void updateModel(){
+		//TODO
 	}
 	
 	/**

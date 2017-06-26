@@ -1,8 +1,8 @@
 /**
  * Characteristics of a bid compiled into a class.
  * 
- * @author Kaitlyn Hennessy
- * version 6.23.2017
+ * @author Kaitlyn
+ * version 6.26.2017
  */
 public class Bid {
 	double latestUtilOffer;
@@ -14,7 +14,7 @@ public class Bid {
 	 * 
 	 * @param latestUtilOffer
 	 * 	 */
-	public Bid(int latestUtilOffer){
+	public Bid(double latestUtilOffer){
 		this.latestUtilOffer = latestUtilOffer;
 	}
 	

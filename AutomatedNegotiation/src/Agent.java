@@ -1,13 +1,17 @@
 /**
  * First attempt at an automated negotiation agent.
  * 
- * @author Kaitlyn Hennessy
- * version 6.23.2017
+ * @author Kaitlyn
+ * version 6.26.2017
  */
 public class Agent {
 	//Variables.  Visibility to be decided.
-	int timeAllowed;
-	int currentTime;
+	public static final int ACCEPTED = 1;
+	public static final int DENIED = 0;
+	public static final int END_NEGOTIATIONS = -1;
+	double timeAllowed;
+	double currentTime;
+	OpponentModel opponent = new OpponentModel();
 	
 	/**
 	 * Concession method to determine what action to take regarding an offer made.
@@ -23,7 +27,9 @@ public class Agent {
 			//if new phase
 				//update understanding of opponent
 				//predict their offer
+				opponent.predictedOffer();
 				//decide optimal utility to bid
+				generateOffer();
 				//offer
 					//if accepted
 						//end negotiations
@@ -35,7 +41,7 @@ public class Agent {
 			//update current time	
 		}
 		//no agreement reached (return -1)
-		return -1;
+		return END_NEGOTIATIONS;
 	}
 	
 	/**
@@ -43,7 +49,7 @@ public class Agent {
 	 * 
 	 * @return
 	 */
-	private int generateOffer(){
+	private double generateOffer(){
 		//TODO
 		
 		//keep in mind all other bids
